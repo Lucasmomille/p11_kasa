@@ -1,5 +1,8 @@
 $color-bg: #E5E5E5;
 $color-primary: #FF6060;
+$color-white: #FFFFFF;
+$color-black: #000000;
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap';
 
 :root {
     background-color: $color-bg;
@@ -10,6 +13,7 @@ $color-primary: #FF6060;
 body {
     padding-right: 6rem;
     padding-left: 6rem;
+    font-family: 'Montserrat', Helvetica, sans-serif, monospace;
 }
 
 ul {
@@ -18,4 +22,17 @@ ul {
 
 a {
     text-decoration: none;
+    color: $color-black;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fill,minmax(24rem,1fr));
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 100%;
+    background-color: #F6F6F6;
+    color: $color-white;
 }

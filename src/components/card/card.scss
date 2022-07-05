@@ -1,0 +1,38 @@
+.card {
+    width: 100%;
+    background-color: #FF6060;
+    border-radius: .5rem;
+    overflow: hidden;
+
+    a {
+        color: #FFFFFF;
+    }
+
+    &__thumb {
+        object-fit: cover;
+        position: relative;
+        &:before {
+            position: absolute;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(255,255,255,.2) 0%, rgba(0,0,0,0.8081699232427346) 100%);
+            content: '';
+        }
+    }
+    &__image {
+        max-width: 100%;
+        height: 22.5rem;
+    }
+    &__content {
+        
+        
+    }
+    &__title {
+        font-size: 1.2em;
+        padding: 1rem;
+        position: absolute;
+        z-index: 2;
+        bottom: .5rem;
+    }
+}
