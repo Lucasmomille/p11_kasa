@@ -5,11 +5,15 @@
 
     &__title {
         padding: 1rem;
+        display: flex;
+        justify-content: space-between;
         background-color: #FF6060;
         border-radius: .5rem;
         color: #FFFFFF;
     }
-
+    &__btn {
+        cursor: pointer;
+    }
     &__content {
         padding: 1rem;
     }

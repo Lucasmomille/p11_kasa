@@ -9,7 +9,7 @@ export default function Dropdown({title, content}) {
         <div className='dropdown'>
             <div className="dropdown__title">
                 <span>{title}</span>
-                <span onClick={() => setShow(!show)}>
+                <span onClick={() => setShow(!show)} className="dropdown__btn">
                     <SvgComponent
                         name="arrowDown"
                         className='fill-white'

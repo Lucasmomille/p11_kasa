@@ -43,6 +43,21 @@ a {
     }
 } */
 
+.product {
+    &__banner {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        height: 25rem;
+        border-radius: .5rem;
+        overflow: hidden;
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
 .fill-primary {
     fill: $color-primary;
 }

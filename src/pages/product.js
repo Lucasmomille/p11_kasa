@@ -22,8 +22,8 @@ export default function Product() {
     return (
         <Fragment>
             { product ? <Layout>
-                <div className='banner__wrapper'>
-                    <img src={product.cover} alt="logement" className='banner__img' />
+                <div className='product__banner'>
+                    <img src={product.cover} alt="logement" className='product__img' />
                 </div>
                 <div className="product__container">
                     <h1>{product.title}</h1>
