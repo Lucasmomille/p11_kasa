@@ -20,10 +20,6 @@ export default function Home() {
         .catch(e => console.log(e))
     }, [])
 
-    console.log('data', data)
-    if(data) {
-        data.map(card => console.log('card', card))
-    }
     return (
         <Layout>
             <Banner></Banner>

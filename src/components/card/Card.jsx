@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import './card.scss'
 
 export default function Card(card) {
-    console.log('in card', card.card)
     return (
         <div className='card'>
-            <Link to="/product/{card.card.id}">
+            <Link to={`/product/${card.card.id}`}>
                 <div className='card__thumb'>
                     <img src={card.card.cover} alt="logement" className='card__image' />
                     <h2 className="card__title">{card.card.title}</h2>

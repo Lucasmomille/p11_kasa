@@ -1,0 +1,16 @@
+.dropdown {
+    border-radius: .5rem;
+    background-color: #F6F6F6;
+    max-width: 50%;
+
+    &__title {
+        padding: 1rem;
+        background-color: #FF6060;
+        border-radius: .5rem;
+        color: #FFFFFF;
+    }
+
+    &__content {
+        padding: 1rem;
+    }
+}

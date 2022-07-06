@@ -36,3 +36,21 @@ a {
     background-color: #F6F6F6;
     color: $color-white;
 }
+
+/* .product {
+    &__container {
+        
+    }
+} */
+
+.fill-primary {
+    fill: $color-primary;
+}
+
+.fill-empty {
+    fill: #E3E3E3;
+}
+
+.fill-white {
+    fill: $color-white;
+}

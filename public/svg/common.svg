@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+        <symbol id="arrowUp" xmlns="http://www.w3.org/2000/svg"><path d="m24.84 16.347 2.36-2.374L14 .787.8 13.987l2.36 2.36L14 5.507l10.84 10.84Z" fill="#fff"/></symbol>
+        <symbol id="arrowDown" xmlns="http://www.w3.org/2000/svg"><path d="M3.16.653.8 3.027 14 16.213l13.2-13.2-2.36-2.36L14 11.493 3.16.653Z"/></symbol>
+        <symbol id="star" xmlns="http://www.w3.org/2000/svg"><path d="M18.645 12 15 0l-3.645 12H0l9.27 6.615L5.745 30 15 22.965 24.27 30l-3.525-11.385L30 12H18.645Z"/></symbol>
+    </defs>
+</svg>
