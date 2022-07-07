@@ -13,8 +13,36 @@
     }
     &__btn {
         cursor: pointer;
+        
+        svg {
+            height: 1rem;
+        }
     }
     &__content {
         padding: 1rem;
+        animation: fadein 1s ease-in-out;
+        animation-timing-function: cubic-bezier(.79,-0.08,.37,1.47);
+    }
+}
+
+@keyframes fadein {
+    from { 
+        opacity: .1; 
+    }
+    to { 
+        opacity: 1; 
+    }
+}
+
+.rotate {
+    animation: rotate 1s forwards;
+    animation-timing-function: cubic-bezier(.79,-0.08,.37,1.47);
+}
+@keyframes rotate {
+    from { 
+        transform: rotate(0); 
+    }
+    to { 
+        transform: rotate(180deg);
     }
 }
