@@ -1,11 +1,22 @@
+@import '../../../assets/scss/variables';
+
 .profile {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
 
+    @media (min-width: $breakpoint-sm) {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
     &__name {
         margin-right: 1rem;
         text-align: end;
+        font-size: 1.3em;
+        width: -webkit-min-content;
+        width: -moz-min-content;
+        width: min-content;
     }
     &__picture {
         border-radius: 50%;

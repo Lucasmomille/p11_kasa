@@ -21,34 +21,43 @@ export default function Product() {
     console.log('product', product)
     return (
         <Fragment>
-            { product ? <Layout>
+            { product && <Layout>
                 <div className='product__banner'>
                     <img src={product.cover} alt="logement" className='product__img' />
                 </div>
                 <div className="product__container">
-                    <div className='product__info'>
-                        <h1>{product.title}</h1>
-                        <h2>{product.location}</h2>
-                        
-                        <div className='tag'>
-                            {
-                                product.tags.map(tag => 
-                                <div className='tag__name'>{tag}</div>
-                                )
-                            }
+                    <div className='product__header'>
+                        <div className='porduct_info'>
+                            <h1>{product.title}</h1>
+                            <h2>{product.location}</h2>
+                            
+                            <div className='tag'>
+                                {
+                                    product.tags.map(tag => 
+                                    <div className='tag__name'>{tag}</div>
+                                    )
+                                }
+                            </div>
                         </div>
-                        <Profile host={product.host}></Profile>
-                        { Array.from({ length: 5 }, (_, i) => (
-                            <SvgComponent
-                                key={i} 
-                                name="star"
-                                className={`${i < product.rating ? 'fill-primary' : 'fill-white'}`}
-                            ></SvgComponent>
-                        ))}
-                    </div>                    
-                    <Dropdown title="Description" content={product.description}></Dropdown>
+                        <div className='product__reassurance'>
+                            <Profile host={product.host}></Profile>
+                            <div className='product__reassurance__rating'>
+                                { Array.from({ length: 5 }, (_, i) => (
+                                    <SvgComponent
+                                        key={i} 
+                                        name="star"
+                                        className={`${i < product.rating ? 'fill-primary' : 'fill-white'}`}
+                                    ></SvgComponent>
+                                ))}
+                            </div>
+                        </div>
+                    </div> 
+                    <div className='product__description'>
+                        <Dropdown title="Description" content={product.description}></Dropdown>
+                        <Dropdown title="&Eacute;quipements" content={product.equipments}></Dropdown>
+                    </div>                   
                 </div>
-            </Layout> : <div></div>}
+            </Layout>}
         </Fragment>
     )
 }

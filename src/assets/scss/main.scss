@@ -1,19 +1,22 @@
-$color-bg: #E5E5E5;
-$color-primary: #FF6060;
-$color-white: #FFFFFF;
-$color-black: #000000;
+@import './variables';
+
 @import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap';
 
 :root {
-    background-color: $color-bg;
+    background-color: $color-white;
     color: $color-primary;
     font-size: 1em
 }
 
 body {
-    padding-right: 10rem;
-    padding-left: 10rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 10rem;
     font-family: 'Montserrat', Helvetica, sans-serif, monospace;
+    @media (min-width: $breakpoint-sm) {
+        padding-right: 10rem;
+        padding-left: 10rem;
+    }
 }
 
 ul {
@@ -29,8 +32,6 @@ a {
     display: grid;
     grid-gap: 3rem;
     grid-template-columns: repeat(auto-fill,minmax(24rem,1fr));
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding: 2rem;
     width: 100%;
     background-color: #F6F6F6;
@@ -48,13 +49,54 @@ a {
         margin-top: 2rem;
         margin-bottom: 2rem;
         width: 100%;
-        height: 25rem;
+        height: 12rem;
         border-radius: .5rem;
         overflow: hidden;
+        object-fit: cover;
+        @media (min-width: $breakpoint-sm) {
+            height: 25rem;
+        }
     }
     &__img {
         width: 100%;
         object-fit: cover;
+        @media (max-width: $breakpoint-sm) {
+            height: 100%;
+        }
+    }
+    &__header {
+        margin-bottom: 2rem;
+        @media (min-width: $breakpoint-sm) {
+            display: flex;
+        }
+
+        & > * {
+            @media (min-width: $breakpoint-sm) {
+                flex: 0 0 50%;
+            }
+        }
+    }
+    &__reassurance {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        @media (min-width: $breakpoint-sm) {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+    &__description {
+
+        @media (min-width: $breakpoint-sm) {
+            display: flex;
+        }
+
+        & > * {
+            @media (min-width: $breakpoint-sm) {
+                flex: 0 0 50%;
+            }
+        }
     }
 }
 
@@ -72,9 +114,8 @@ a {
 
 .tag {
     display: flex;
-    max-width: 50%;
+    max-width: 100%;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
 
      &__name {
         padding: .5rem;
