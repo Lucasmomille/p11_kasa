@@ -5,7 +5,6 @@ import './dropdown.scss'
 export default function Dropdown({title, content}) {
     const  [show, setShow] = useState(false)
     const isNotEmptyArray = (el) => Array.isArray(el) && !!el.length;
-    console.log('test Arr', isNotEmptyArray(content))
  
     return (
         <div className='dropdown'>
@@ -18,10 +17,12 @@ export default function Dropdown({title, content}) {
                     ></SvgComponent>
                 </span>
             </div>
-            { !show & !isNotEmptyArray(content) ?
+            { !show & !isNotEmptyArray(content) &&
                 <div className="dropdown__content">
                     {content}
-                </div> :
+                </div>
+            }
+            { !show & isNotEmptyArray(content) &&
                 <ul className="dropdown__content">
                 {content.map((el, elIndex) => (
                     <li key={elIndex}>{el}</li>

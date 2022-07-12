@@ -4,6 +4,7 @@ import axios from 'axios'
 import Layout from '../components/Layout'
 import SvgComponent from '../components/svgComponent/SvgComponent'
 import Profile from '../components/product/profile/Profile'
+import Carousel from '../components/carousel/Carousel'
 
 import Dropdown from '../components/dropdown/DropDown'
 
@@ -17,14 +18,16 @@ export default function Product() {
         .then(response => setData(response.data))
         .catch(e => console.log(e))
     }, [])
-    const product = data.find(card => card.id === id)
-    console.log('product', product)
+
+    const product = data.find(product => product.id === id)
+    
+    const images = product ? product.pictures : [];
+    
+
     return (
         <Fragment>
             { product && <Layout>
-                <div className='product__banner'>
-                    <img src={product.cover} alt="logement" className='product__img' />
-                </div>
+                <Carousel slides={images}></Carousel>
                 <div className="product__container">
                     <div className='product__header'>
                         <div className='porduct_info'>
@@ -33,8 +36,8 @@ export default function Product() {
                             
                             <div className='tag'>
                                 {
-                                    product.tags.map(tag => 
-                                    <div className='tag__name'>{tag}</div>
+                                    product.tags.map((tag, index) => 
+                                    <div className='tag__name' key={`tag-${index}`}>{tag}</div>
                                     )
                                 }
                             </div>
@@ -46,7 +49,7 @@ export default function Product() {
                                     <SvgComponent
                                         key={i} 
                                         name="star"
-                                        className={`${i < product.rating ? 'fill-primary' : 'fill-white'}`}
+                                        className={`${i < product.rating ? 'fill-primary' : 'fill-empty'}`}
                                     ></SvgComponent>
                                 ))}
                             </div>

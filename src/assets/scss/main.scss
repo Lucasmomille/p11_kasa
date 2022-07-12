@@ -45,25 +45,6 @@ a {
 } */
 
 .product {
-    &__banner {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        width: 100%;
-        height: 12rem;
-        border-radius: .5rem;
-        overflow: hidden;
-        object-fit: cover;
-        @media (min-width: $breakpoint-sm) {
-            height: 25rem;
-        }
-    }
-    &__img {
-        width: 100%;
-        object-fit: cover;
-        @media (max-width: $breakpoint-sm) {
-            height: 100%;
-        }
-    }
     &__header {
         margin-bottom: 2rem;
         @media (min-width: $breakpoint-sm) {
@@ -90,11 +71,12 @@ a {
 
         @media (min-width: $breakpoint-sm) {
             display: flex;
+            justify-content: space-between;
         }
 
         & > * {
             @media (min-width: $breakpoint-sm) {
-                flex: 0 0 50%;
+                flex: 0 0 49%;
             }
         }
     }
@@ -124,4 +106,20 @@ a {
         border-radius: .75rem;
         margin-right: 1rem;
      }
+}
+
+.slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    &__previous {
+        transform: rotate(90deg);
+        left: 0;
+    }
+    &__next {
+        transform: rotate(-90deg);
+        right: 0;
+    }
 }
