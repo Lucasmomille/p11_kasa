@@ -9,14 +9,7 @@
 }
 
 body {
-    padding-right: 2rem;
-    padding-left: 2rem;
-    padding-bottom: 10rem;
     font-family: 'Montserrat', Helvetica, sans-serif, monospace;
-    @media (min-width: $breakpoint-sm) {
-        padding-right: 10rem;
-        padding-left: 10rem;
-    }
 }
 
 ul {
