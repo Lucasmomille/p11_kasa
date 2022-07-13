@@ -4,6 +4,7 @@ import * as ROUTES from './constants/routes';
 import './assets/scss/main.scss'
 const Home = lazy(() => import('./pages/home'));
 const Product = lazy(() => import('./pages/product'));
+const ErrorPage = lazy(() => import('./pages/error'));
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Routes>
             <Route path={ROUTES.HOME} element={<Home/>} />
             <Route path={ROUTES.PRODUCT} element={<Product/>} />
+            <Route path='*' element={<ErrorPage/>} />
           </Routes>
         </Suspense>
     </Router>

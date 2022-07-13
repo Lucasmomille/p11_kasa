@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import SvgComponent from '../components/svgComponent/SvgComponent'
 import Profile from '../components/product/profile/Profile'
 import Carousel from '../components/carousel/Carousel'
+import ErrorPage from '../pages/error'
 
 import Dropdown from '../components/dropdown/DropDown'
 
@@ -26,7 +27,7 @@ export default function Product() {
 
     return (
         <Fragment>
-            { product && <Layout>
+            { product ? <Layout>
                 <Carousel slides={images}></Carousel>
                 <div className="product__container">
                     <div className='product__header'>
@@ -60,7 +61,8 @@ export default function Product() {
                         <Dropdown title="&Eacute;quipements" content={product.equipments}></Dropdown>
                     </div>                   
                 </div>
-            </Layout>}
+            </Layout> : 
+            <ErrorPage></ErrorPage>}
         </Fragment>
     )
 }

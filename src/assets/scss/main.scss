@@ -123,3 +123,23 @@ a {
         right: 0;
     }
 }
+
+.error {
+    width: 100%;
+    text-align: center;
+    
+    &__title {
+        font-size: 8em;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: 2em;
+    }
+
+    a {
+        text-decoration: underline;
+        color: $color-primary;
+        font-size: 1.5em;
+    }
+}
