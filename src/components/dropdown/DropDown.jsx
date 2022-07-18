@@ -2,10 +2,10 @@ import React, {useState} from 'react'
 import SvgComponent from '../svgComponent/SvgComponent'
 import './dropdown.scss'
 
-export default function Dropdown({title, content}) {
-    const  [show, setShow] = useState(false)
+export default function Dropdown({title, content, open = true}) {
+    const  [show, setShow] = useState(open)
     const isNotEmptyArray = (el) => Array.isArray(el) && !!el.length;
- 
+    console.log('test', isNotEmptyArray(content))
     return (
         <div className='dropdown'>
             <div className="dropdown__title">
@@ -17,18 +17,18 @@ export default function Dropdown({title, content}) {
                     ></SvgComponent>
                 </span>
             </div>
-            { !show & !isNotEmptyArray(content) &&
-                <div className="dropdown__content">
-                    {content}
-                </div>
-            }
-            { !show & isNotEmptyArray(content) &&
-                <ul className="dropdown__content">
-                {content.map((el, elIndex) => (
-                    <li key={elIndex}>{el}</li>
-                ))}
-                </ul> 
-            }
+            <div className={`dropdown__content ${show ? "fadein" : 'fadeout'}`}>
+                { typeof content === 'string' &&
+                    <p className='dropdown__content__text'>{content}</p>
+                }
+                { isNotEmptyArray(content) &&
+                    <ul className='dropdown__content__text'>
+                        {content.map((el, elIndex) => (
+                            <li key={elIndex}>{el}</li>
+                        ))}
+                    </ul> 
+                }
+            </div>
         </div>
     )
 }

@@ -7,7 +7,7 @@ export default function Card(card) {
         <div className='card'>
             <Link to={`/product/${card.card.id}`}>
                 <div className='card__thumb'>
-                    <img src={card.card.cover} alt="logement" className='card__image' />
+                    <img src={card.card.cover} alt="logement" className='card__image' loading="lazy"/>
                     <h2 className="card__title">{card.card.title}</h2>
                 </div>
             </Link>

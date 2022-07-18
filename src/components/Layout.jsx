@@ -3,7 +3,7 @@ import NavBar from './navbar/NavBar'
 import Footer from './footer/Footer'
 import'./layout.scss'
 
-export default function Layout({ children}) {
+export default function Layout({ children }) {
 
     return (
         <Fragment>

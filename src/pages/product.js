@@ -57,7 +57,7 @@ export default function Product() {
                         </div>
                     </div> 
                     <div className='product__description'>
-                        <Dropdown title="Description" content={product.description}></Dropdown>
+                        <Dropdown title="Description" content={product.description} open={false}></Dropdown>
                         <Dropdown title="&Eacute;quipements" content={product.equipments}></Dropdown>
                     </div>                   
                 </div>

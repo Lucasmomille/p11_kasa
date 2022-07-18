@@ -15,7 +15,7 @@ export default function Carousel({slides}) {
         <div className='carousel'>
             {slides.map((image, index) => 
                 {return (
-                    <div>
+                    <>
                         {index === current &&
                             <img
                                 src={image} 
@@ -25,7 +25,7 @@ export default function Carousel({slides}) {
                                 loading="lazy"
                             />
                         }
-                    </div>
+                    </>
                 )}
             )}
             <span onClick={() => prevSlide()} className={`slide slide__previous `}>

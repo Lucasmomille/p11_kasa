@@ -5,14 +5,6 @@ import Banner from '../components/banner/Banner'
 import Card from '../components/card/Card'
 
 export default function Home() {
-    /* const url = 'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json';
-    const config = {
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': '*',
-            'Access-Control-Allow-Credentials': 'true'
-        }
-    } */
     const [data, setData] = useState([])
     useEffect(() => {
         axios.get('/data/logements.json')
@@ -22,7 +14,9 @@ export default function Home() {
 
     return (
         <Layout>
-            <Banner></Banner>
+            <Banner imgSrc="/images/banner.png">
+                <h2 className="banner__title">Chez vous, partout et ailleurs</h2>
+            </Banner>
             <div className="wrapper">
                 {data.map((card, dataIdx) => (
                 <Card

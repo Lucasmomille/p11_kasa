@@ -12,7 +12,7 @@ export default function NavBar() {
             <ul className="navbar__list">
                 <li className="">
                     <NavLink
-                        exact
+                        exact='true'
                         to="/"
                         className="navbar__list__option"
                         activeClassName="active"
