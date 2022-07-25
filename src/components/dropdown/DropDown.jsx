@@ -17,7 +17,7 @@ export default function Dropdown({title, content, open = true}) {
                     ></SvgComponent>
                 </span>
             </div>
-            <div className={`dropdown__content ${show ? "fadein" : 'fadeout'}`}>
+            <div className={`dropdown__content ${show ? "fadein" : null}`}>
                 { typeof content === 'string' &&
                     <p className='dropdown__content__text'>{content}</p>
                 }

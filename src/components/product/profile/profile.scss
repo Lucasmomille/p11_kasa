@@ -13,10 +13,13 @@
     &__name {
         margin-right: 1rem;
         text-align: end;
-        font-size: 1.3em;
+        font-size: 1.1em;
         width: -webkit-min-content;
         width: -moz-min-content;
         width: min-content;
+        @media (min-width: $breakpoint-sm) {
+            font-size: 1.3em;
+        }
     }
     &__picture {
         border-radius: 50%;
