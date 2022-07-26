@@ -1,10 +1,9 @@
 @import '../../assets/scss/variables.scss';
 .card {
     width: 100%;
-    background-color: #FF6060;
     border-radius: .5rem;
     overflow: hidden;
-    height: 12.5rem;
+    height: 16rem;
 
     @media (min-width: $breakpoint-sm) {
         height: 22.5rem;

@@ -21,3 +21,19 @@
         }
     }
 }
+
+.slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    &__previous {
+        transform: rotate(90deg);
+        left: 0;
+    }
+    &__next {
+        transform: rotate(-90deg);
+        right: 0;
+    }
+}

@@ -9,6 +9,10 @@
     
     border-radius: 25px;
     overflow: hidden;
+
+    &__home {
+        height: 10rem;
+    }
     @media (min-width: $breakpoint-sm) {
         height: 12rem;
         margin-top: 3rem;
@@ -26,9 +30,10 @@
         }
     }
     &__title {
-        font-size: 1.7em;
+        font-size: 1.5em;
+        font-weight: 500;
         position: absolute;
-        padding-left: 1rem;
+        padding: 0 .5rem 0 .5rem;
         top: 50%;
         transform: translateY(-50%);
         width: 100%;
@@ -36,7 +41,8 @@
         color: white;
         @media (min-width: $breakpoint-sm) {
             text-align: center;
-            padding-left: 0;
+            font-size: 2.5em;
+            padding: 0;
         }
     }
 }

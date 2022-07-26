@@ -1,0 +1,82 @@
+.product {
+    &__container {
+        margin-bottom: 2rem;
+    }
+    &__header {
+        margin-bottom: 2rem;
+
+        @media (min-width: $breakpoint-sm) {
+            display: flex;
+            & > * {
+                flex: 0 0 50%;
+            }
+        }
+    }
+    &__info {
+        h1 {
+            font-size: 1.8em;
+            @media (min-width: $breakpoint-sm) {
+                font-size: 2em;
+            }
+        }
+        h2 {
+            font-size: 1.3em;
+            margin: 1rem 0 1rem 0;
+            @media (min-width: $breakpoint-sm) {
+                font-size: 1.5em;
+            }
+        }
+    }
+    &__reassurance {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        @media (min-width: $breakpoint-sm) {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        &__rating {
+            & > svg {
+                transform: scale(.8);
+                &:not(:last-child) {
+                    margin-right: -5px;
+                }
+                @media (min-width: $breakpoint-sm) {
+                    transform: scale(1);
+                    &:not(:last-child) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    &__description {
+
+        @media (min-width: $breakpoint-sm) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        & > * {
+            @media (min-width: $breakpoint-sm) {
+                flex: 0 0 49%;
+            }
+        }
+    }
+}
+
+.tag {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+
+    &__name {
+        padding: .5rem;
+        background-color: $color-primary;
+        color: $color-white;
+        border-radius: .75rem;
+        margin-right: 1rem;
+    }
+}

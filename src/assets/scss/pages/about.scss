@@ -1,0 +1,8 @@
+.about {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5rem;
+    @media (min-width: $breakpoint-sm) {
+        width: 70%;
+    }
+}

@@ -31,7 +31,7 @@
         border-radius: .5rem;
         max-height: 0;
         opacity: 0;
-        transition: opacity 500ms ease-in-out, max-height 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
 
         p, ul {
             padding: 1.5rem 1rem 1rem 1rem;
