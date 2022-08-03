@@ -38,11 +38,11 @@
     cursor: pointer;
     z-index: 2;
     &__previous {
-        transform: rotate(90deg);
+        transform: rotate(90deg) scale(1.5);
         left: 0;
     }
     &__next {
-        transform: rotate(-90deg);
+        transform: rotate(-90deg) scale(1.5);
         right: 0;
     }
 }
