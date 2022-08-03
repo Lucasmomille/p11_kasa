@@ -15,7 +15,7 @@ export default function Carousel({slides}) {
     const pagination = current + 1 +'/'+ slides.length
     
     return (
-        <div className='carousel'>
+        <div className='carousel' tabIndex={0}>
             {slides.map((image, index) => 
                 {return (
                     <>
@@ -33,13 +33,13 @@ export default function Carousel({slides}) {
             )}
             {slides.length > 1 && 
                 <>
-                    <span onClick={() => prevSlide()} className={`slide slide__previous `} data-testid="prevBtn">
+                    <span onClick={() => prevSlide()} ariaLabel="control" role="button" tabIndex={0} onKeyDown={e => e.key === 'Enter' && prevSlide()} className={`slide slide__previous `} data-testid="prevBtn">
                         <SvgComponent
                             name="arrowDown"
                             className='fill-white'
                         ></SvgComponent>
                     </span>
-                    <span onClick={() => nextSlide()} className={`slide slide__next `}>
+                    <span onClick={() => nextSlide()} ariaLabel="control" role="button" tabIndex={0} onKeyDown={e => e.key === 'Enter' && nextSlide()} className={`slide slide__next `}>
                         <SvgComponent
                             name="arrowDown"
                             className='fill-white'
