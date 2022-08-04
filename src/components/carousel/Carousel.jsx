@@ -7,7 +7,6 @@ export default function Carousel({slides}) {
     const nextSlide = () => {
         setCurrent(current === slides.length - 1 ? 0 : current + 1);
     };
-    // rajouter pagination + no carousel if 1 img
 
     const prevSlide = () => {
         setCurrent(current === 0 ? slides.length - 1 : current - 1);
